@@ -1,0 +1,153 @@
+body, html{
+    width: 100%;
+    height: auto;
+}
+#content{
+    min-height: 600px;
+}
+
+/* Navigation bar */
+#user{
+    padding-right: 3px;
+}
+#login{
+    padding-right: 3px;
+}
+nav{
+    font-weight: bold;
+    font-size: 17px;
+}
+/* Navigation bar */
+
+/* Banner and banner content */
+.banner_image{
+    text-align: center;
+    background: url(images/intro-bg_1.jpg)no-repeat center center;
+    background-size: cover;
+}
+.banner_content{
+    position: relative;
+    max-width: 660px;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    color: #FFFFFF;
+    margin-top: 18%;
+    margin-bottom: 20%;
+    margin-left: 20%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+/* Banner and banner content */
+
+
+.items{
+     display: inline-block;     
+     padding: 4px;    
+     border: 1px solid #ddd;     
+     border-radius: 4px; 
+     margin: 35px;     
+}
+.Thumbnail{
+    display: inline-block;
+    width: 300px;     
+    height: auto; 
+}
+.captions{
+    font-family: sans-serif;
+    color:#000;     
+    font-size: 10px;     
+    font-weight: bold;  
+    text-align: center;
+}
+/* Thumbnails */ 
+
+/* Login and Signup panels */
+.panelstyle{
+    width: 50%;
+    padding-top: 100px;
+    padding-bottom: 150px;
+    margin-left: 300px;
+    
+}
+form{
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.login{
+    padding-bottom: 60px;
+}
+.panel-body{
+    color: rgb(128, 0, 0, 0.6);
+    font-style: italic;
+}
+/* Login and Signup panels */
+
+/* Products page */
+.Products{
+    padding-top: 100px;
+}
+.caption{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.size{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+}
+confirm{
+    color: #FFFFFF;
+}
+.shirts{
+    padding-bottom: 70px;
+}
+/* Products page */
+
+/* Cart page */
+.tablestyle{
+    margin-top: 150px;
+}
+/* Cart page */
+
+/* Success page */
+.success{
+    padding-left: 300px;
+    padding-right: 200px;
+    padding-top: 250px;
+    font-weight: bold;
+}
+/* Success page */
+
+/* Footer */
+footer{
+    position: relative;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    background-color: #101010;
+    color:#9d9d9d; 
+    width: 100%;
+}
+/* Footer */
+
+@media(max-width:991px) {
+    .panelstyle{
+        width: 100%;
+        margin-left: 20px;
+        
+    }
+    .Thumbnail{
+        width: 100%;
+    }
+    .banner_content{
+        margin-left: 0%;
+    }
+    
+}
+@media(max-width:425px){
+    .success{
+        padding-left: -500px;
+    }
+}
+
+
+
