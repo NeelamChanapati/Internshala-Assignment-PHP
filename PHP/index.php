@@ -1,5 +1,8 @@
 <?php
+    /* Includes database connected file */
     require 'includes/common.php';
+    
+    /* If already logged in you will be redirected to Products page */
     if(isset($_SESSION['email'])){
         header('location: Products.php');
     }
@@ -9,18 +12,30 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        
+        <!-- jquery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        
+        <!--Latest compiled and minified JavaScript--> 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
         <title>LifestyleStore</title>
+        
+        <!-- Linking style sheet -->
         <link rel="stylesheet" type="text/css" href="Style.css">
     </head>
     <body>
         <?php
-        include 'includes/header.php';
+             /* Includes header file */
+            include 'includes/header.php';
         ?>
     <div id="content">
+        <!-- Banner Image -->
         <div class="banner_image">
+            
+            <!-- Banner Content -->
             <div class="container">
                 <div class="banner_content">
                     <h1>We sell lifestyle</h1>
@@ -30,6 +45,7 @@
             </div> 
         </div>
         </div>
+        <!-- Thumbnails -->
         <div class="container">
             <div class="row text-center">
                 <div class="items">
@@ -62,6 +78,7 @@
         </div>
         </div>
         <?php
+            /* Includes footer file */
             include 'includes/footer.php';
         ?>
     </body>
