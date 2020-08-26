@@ -1,4 +1,5 @@
 <?php
+    /* Includes database connected file */
     require 'includes/common.php';
     
     $name=$_POST['name'];
@@ -19,17 +20,19 @@
     $address=$_POST['address'];
     $address=mysqli_real_escape_string($con, $address);
     
-    
+    /* Contact which isn't in this pattern is not accepted */
     $regex_contact="/^[789][0-9]{9}$/";
     
     $query="SELECT id FROM users WHERE email='$email'";
     $result= mysqli_query($con, $query);
     $rows_fetched=mysqli_num_rows($result);
     
+    /* Checks whether there is any account with this email */
     if($rows_fetched > 0) {
         $e="<span class='red'>Email already exists</span>";
         header('location:SignUp.php?error='.$e);
     } else{
+        /* Inserts the given values in the respective fields */
         $user_registration_query="INSERT INTO users(name, email, password, contact, city, address)VALUES('".$name."', '".$email."', '".$password."', '".$contact."', '".$city."', '".$address."')";
         $user_registration_submit= mysqli_query($con, $user_registration_query) or die(mysqli_error($con));
         $user_id= mysqli_insert_id($con);
